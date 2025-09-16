@@ -1,0 +1,115 @@
+<!-- home.html (Página principal com imóveis e calendário) -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home Exchange - Imóveis</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Home Exchange (Demo)</div>
+      <nav>
+        <button id="logoutBtn" class="btn">Sair</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Imóveis disponíveis</h1>
+      <p class="muted">Clique em "Ver disponibilidade" para escolher datas.</p>
+
+      <section id="properties" class="grid">
+        <!-- Card 1 -->
+        <article class="card property"
+          data-id="p1"
+          data-name="Casa de Praia"
+          data-location="Florianópolis, SC"
+          data-description="Casa pé na areia com 3 quartos, varanda e churrasqueira."
+          data-available='[{"start":"2025-10-10","end":"2025-10-20"},{"start":"2025-11-05","end":"2025-11-18"}]'>
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=250&fit=crop" 
+                 alt="Casa de Praia" 
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMTMxNzIwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0ic3lzdGVtLXVpIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOGE5NGE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbWFnZW0gZGEgQ2FzYTwvdGV4dD4KPC9zdmc+'" />
+          </div>
+          <div class="property-content">
+            <h3>Casa de Praia</h3>
+            <p class="location">Florianópolis, SC</p>
+            <p>Casa pé na areia com 3 quartos, varanda e churrasqueira.</p>
+            <button class="btn primary open-calendar">Ver disponibilidade</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card property"
+          data-id="p2"
+          data-name="Apartamento Central"
+          data-location="São Paulo, SP"
+          data-description="Apartamento moderno perto do metrô, 2 quartos, workspace."
+          data-available='[{"start":"2025-09-25","end":"2025-10-05"},{"start":"2025-12-01","end":"2025-12-24"}]'>
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=250&fit=crop" 
+                 alt="Apartamento Central" 
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMTMxNzIwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0ic3lzdGVtLXVpIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOGE5NGE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BcGFydGFtZW50bzwvdGV4dD4KPC9zdmc+'" />
+          </div>
+          <div class="property-content">
+            <h3>Apartamento Central</h3>
+            <p class="location">São Paulo, SP</p>
+            <p>Apartamento moderno perto do metrô, 2 quartos, workspace.</p>
+            <button class="btn primary open-calendar">Ver disponibilidade</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card property"
+          data-id="p3"
+          data-name="Chalé na Serra"
+          data-location="Gramado, RS"
+          data-description="Chalé aconchegante com lareira e vista para as montanhas."
+          data-available='[{"start":"2025-10-15","end":"2025-10-25"},{"start":"2025-11-20","end":"2025-11-30"}]'>
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=250&fit=crop" 
+                 alt="Chalé na Serra" 
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDQwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjMTMxNzIwIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTI1IiBmb250LWZhbWlseT0ic3lzdGVtLXVpIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOGE5NGE3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DaGFsw6k8L3RleHQ+Cjwvc3ZnPg=='" />
+          </div>
+          <div class="property-content">
+            <h3>Chalé na Serra</h3>
+            <p class="location">Gramado, RS</p>
+            <p>Chalé aconchegante com lareira e vista para as montanhas.</p>
+            <button class="btn primary open-calendar">Ver disponibilidade</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Modal de calendário -->
+    <div id="calendarModal" class="modal hidden" aria-hidden="true" role="dialog">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-content card">
+        <header class="modal-header">
+          <h2 id="modalTitle">Datas disponíveis</h2>
+          <button class="btn icon" data-close="true" aria-label="Fechar">✕</button>
+        </header>
+        <div class="modal-body">
+          <div id="availabilityInfo" class="muted"></div>
+          <form id="bookingForm" class="form">
+            <div class="row">
+              <div class="col">
+                <label for="checkin">Check-in</label>
+                <input type="date" id="checkin" required />
+              </div>
+              <div class="col">
+                <label for="checkout">Check-out</label>
+                <input type="date" id="checkout" required />
+              </div>
+            </div>
+            <button type="submit" class="btn primary">Solicitar troca</button>
+          </form>
+          <p id="feedback" class="feedback" role="status"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
